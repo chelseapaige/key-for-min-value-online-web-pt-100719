@@ -1,6 +1,16 @@
-# prereqs: iterators, hashes, conditional logic
-# Given a hash with numeric values, return the key for the smallest value
+passengers = {
+   suite_a: "Hazel",
+   suite_b: "Ryan",
+   suite_c: "Ben",
 
-def key_for_min_value(name_hash)
+}
 
+def select_winner(family)
+   winner = "" #given empty value to get the right value
+   passengers.each { |suite, name|
+      if suite == :suite_a && name.start_with?("A")
+      winner = name #set the value that suits the condition
+      end
+   }
+   winner
 end
